@@ -62,4 +62,3 @@ You can do this simply through manifold:
 
     # retrive stats about till usage
     print(pytill.get_stats())
-
