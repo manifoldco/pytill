@@ -59,11 +59,6 @@ def get_result(monkeypatch):
         return mock
     monkeypatch.setattr(requests, 'get', mock_get)
 
-
-
-
-
-
 def test_send_message(send_success):
     expected_guid = GUID
     r = pytill.send_message(['19021234567'],
@@ -71,8 +66,7 @@ def test_send_message(send_success):
         tag='Greeting', voice=True
     )
     assert expected_guid == r['project_launch_guid']
-    
-    
+       
 def test_send_message_raises(send_failure):
     with pytest.raises(requests.HTTPError):
         pytill.send_message(['19021234567'], 'Hi how are you? Its dom I am doing a test')
