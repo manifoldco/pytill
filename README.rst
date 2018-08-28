@@ -34,6 +34,7 @@ manifold run -p till-project -- python
 
 
 .. code-block:: python
+
     import pytill # or from pytill import pytill
 
     # send a message
