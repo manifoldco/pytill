@@ -20,7 +20,7 @@ pytill
 
 
 
-Python package for using Till Mobile
+Python package for using Till Mobile brought to you by manifold.co
 
 
 * Free software: BSD license
@@ -30,7 +30,14 @@ Python package for using Till Mobile
 How to use
 --------
 
-manifold run -p till-project -- python
+Set up a plan for till and retrieve till username and api key. This packages expects the username and api key are injected as env vars ``USERNAME`` and ``API_KEY``.
+
+You can do this simply through manifold:
+
+.. code-block:: bash
+
+    manifold create -p till-project --product till --plan free # provision a free till resource
+    manifold run -p till-project -- python # inject vars
 
 
 .. code-block:: python
@@ -41,6 +48,8 @@ manifold run -p till-project -- python
     pytill.send_message(['19024880000'], 'I am sending a till message isnt that cool!')
 
     # ask a question
+    # note that asking a question is how we open two-way communicate in Till
+    # so this is also how you intiate listening to responses to a sms number with Till
     question = pytill.make_question('How cool is Till mobile?', 'my-question', 'my.webhook/listens/here')
     pytill.send_question(['19024441111', '16139094888'], [question],  'my-project')
 
