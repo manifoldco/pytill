@@ -6,7 +6,7 @@ import os
 
 import requests
 
-TILL_UESERNAME = os.getenv("USERNAME")
+TILL_USERNAME = os.getenv("USERNAME")
 TILL_API_KEY = os.getenv("API_KEY")
 TILL_SEND_URL = "https://platform.tillmobile.com/api/send?username={}&api_key={}"
 TILL_RESULTS_URL = "https://platform.tillmobile.com/api/results"
@@ -57,7 +57,7 @@ def send_message(numbers, text, tag=None, voice=False):
 
     resp = requests.post(
         TILL_SEND_URL.format(
-            TILL_UESERNAME,
+            TILL_USERNAME,
             TILL_API_KEY
         ),
         json=msg
@@ -142,7 +142,7 @@ def send_question(numbers, questions, tag, introduction=None, conclusion=None, v
 
     resp = requests.post(
         TILL_SEND_URL.format(
-            TILL_UESERNAME,
+            TILL_USERNAME,
             TILL_API_KEY
         ),
         json=question_payload
@@ -168,7 +168,7 @@ def get_results(question_tag=None, project_tag=None, project_launch_guid=None,
     
     """
     query = {
-        'username': TILL_UESERNAME,
+        'username': TILL_USERNAME,
         'api_key': TILL_API_KEY
     }
     if question_tag:
@@ -188,7 +188,7 @@ def get_results(question_tag=None, project_tag=None, project_launch_guid=None,
 def get_result(result_guid):
     """Get single result from result guid retreived in a ``get_results`` call"""
     query = {
-        'username': TILL_UESERNAME,
+        'username': TILL_USERNAME,
         'api_key': TILL_API_KEY
     }
     resp = requests.get(TILL_RESULT_URL.format(result_guid), params=query)
@@ -199,7 +199,7 @@ def get_result(result_guid):
 def get_stats(project_tag=None):
     """Get status of your Till usage. This can be broken down by project_tag."""
     query = {
-        'username': TILL_UESERNAME,
+        'username': TILL_USERNAME,
         'api_key': TILL_API_KEY
     }
     if project_tag:
@@ -213,7 +213,7 @@ def get_stats(project_tag=None):
 def get_stat(project_launch_guid):
     """Get particulat status for a project_launch_guid"""
     query = {
-        'username': TILL_UESERNAME,
+        'username': TILL_USERNAME,
         'api_key': TILL_API_KEY
     }
     resp = requests.get(TILL_STAT_URL.format(project_launch_guid), params=query)
