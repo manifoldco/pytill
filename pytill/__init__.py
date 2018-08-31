@@ -4,4 +4,4 @@
 
 __author__ = """manifoldco"""
 __email__ = 'dom@manifold.co'
-__version__ = '0.1.0'
+__version__ = '1.0.0'
