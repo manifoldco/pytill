@@ -1,27 +1,16 @@
-# Config file for automatic testing at travis-ci.org
-
 language: python
 python:
-  - 3.6
-  - 3.5
-  - 3.4
-
-# Command to install dependencies, e.g. pip install -r requirements.txt --use-mirrors
+- 3.6
+- 3.5
+- 3.4
 install: pip install -U tox-travis
-
-# Command to run tests, e.g. python setup.py test
 script: make clean && tox
-
-# Assuming you have installed the travis-ci CLI tool, after you
-# create the Github repo and add it to Travis, run the
-# following command to finish PyPI deployment setup:
-# $ travis encrypt --add deploy.password
 deploy:
   provider: pypi
   distributions: sdist bdist_wheel
   user: domenicrosati
   password:
-    secure: "St/xdUb7Kja2qlhkRvyhtXpNQwNH/puaCLTK6PebKKmJ7fbhFkoaKlIHjZuv4qujV/gB9DJrBxU9OZBaQ1lL4sedIQjW8m+JSHGwNUWVPnpcYypR2sGOFuACPR/v7/aFFT1cBAUovcrdYP7hfj9IGHHFwY0jr3REDaknx4UJMCmbDxCmav2QmVMabV9T1jVJjzkbMvyBh89j3z+Akw8NfxMQ56RLpduH6f74Mkevmrm7U1b4GbhaUNQT+KFiNhPm4XNri3Puk5mGQq9/wK8ZWY/68bdSlqeGtfLrUvuTmSluMNK1/uMuftabG4xXSva5rk9c7CcjnPPZ1ttoOkkYT+1p3qrF01lR7QD3fV76V5QtEmyEG5C5AL18RvObplz3JpY0dMPPVeR/4qGxVJdbWbOybdGsYklkvzPf98++MtgibE+zlR/RIlJA7E34Ged032+VmedZrkmG54+QQyf9EBK1cJHda2rfjnq+7q43nqrTCGQ2F/oOUT/GpCRyD/pHuHYJiCkuDDOawHBBi424T766fD86Q670r7Nsfrk68QBLFsFf5VzI5fS6hfGeMqc49xSPsf+OB/dXPxX26EFmc9Tch+Mjq4dmmHUHKvE38GEujTZ7/meg6kW8DMmARjmUvAauBfJiDCbRVwRbwsYUmzJxxXQCktc78oOiUkL8O/8="
+    secure: Kf0AM96BBv1qOpD32/vv1egKqXy3icGvnE09slHQBym3Dyu43CNtCRciliKuOye3IBTJnQsidq1rZcBM35gqJtHSmbiGt1GvTneYI2CmEo/LQTG3rd4ca6rAdHCq5PZlmI+4HiantCwBmVWceVzWOHiWF8N3Uo0LeXA6bp4YdpfjMJkfwajvTa6ckQH1FNvWiksfnxcTHNy8Z181w1yNvLSHzdwewUEzu2fJd57QSqEiSWnBFRHxLwW+drxS0LgRUAtKm3LLuEeAtTJDl/jI6khJVyX4cyBBEq3JqaWegwn3D9JhM0VJtfwX+1Ks3ICcWWEqeVv4d6F0LVIMv2/HM4aem0sUtFujaRY8KtwX9GUZDPce+vgwwajLc94shysCdJCbU751wtV9bnOsfN365sVzApuirvvsu02zoEmHBS/bZUtzgljXeWTHHIZ/p++b6iRZyCTXHnQUxiOgoPJkRo88fzbNKHVZEUcR87w+9kMfSzvIkfSX+Oqq6t3NApGNGTxepgggIAyWGkjG59F3m3katUHDfnVEjcg2kwwp3yB/hx8gc97HT6c+p3QXjX+7QJXWyeRogE4CrvUtlE0D82vIg/I+ubqjlr0iM9drIWk3TwFhbOsflmnYEkXqbaQKFFJ3U/MJ9+Wu8UCtRF0A05EgP12vtCy+G7kMky2sUbw=
   on:
     tags: true
     repo: manifoldco/pytill
