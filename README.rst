@@ -14,12 +14,6 @@ pytill
         :alt: Documentation Status
 
 
-.. image:: https://pyup.io/repos/github/manifoldco/pytill/shield.svg
-     :target: https://pyup.io/repos/github/manifoldco/pytill/
-     :alt: Updates
-
-
-
 Python package for using Till Mobile brought to you by manifold.co
 
 
