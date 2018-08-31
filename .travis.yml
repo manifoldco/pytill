@@ -20,9 +20,9 @@ script: tox
 deploy:
   provider: pypi
   distributions: sdist bdist_wheel
-  user: manifoldco
+  user: domenicrosati
   password:
-    secure: PLEASE_REPLACE_ME
+    secure: "St/xdUb7Kja2qlhkRvyhtXpNQwNH/puaCLTK6PebKKmJ7fbhFkoaKlIHjZuv4qujV/gB9DJrBxU9OZBaQ1lL4sedIQjW8m+JSHGwNUWVPnpcYypR2sGOFuACPR/v7/aFFT1cBAUovcrdYP7hfj9IGHHFwY0jr3REDaknx4UJMCmbDxCmav2QmVMabV9T1jVJjzkbMvyBh89j3z+Akw8NfxMQ56RLpduH6f74Mkevmrm7U1b4GbhaUNQT+KFiNhPm4XNri3Puk5mGQq9/wK8ZWY/68bdSlqeGtfLrUvuTmSluMNK1/uMuftabG4xXSva5rk9c7CcjnPPZ1ttoOkkYT+1p3qrF01lR7QD3fV76V5QtEmyEG5C5AL18RvObplz3JpY0dMPPVeR/4qGxVJdbWbOybdGsYklkvzPf98++MtgibE+zlR/RIlJA7E34Ged032+VmedZrkmG54+QQyf9EBK1cJHda2rfjnq+7q43nqrTCGQ2F/oOUT/GpCRyD/pHuHYJiCkuDDOawHBBi424T766fD86Q670r7Nsfrk68QBLFsFf5VzI5fS6hfGeMqc49xSPsf+OB/dXPxX26EFmc9Tch+Mjq4dmmHUHKvE38GEujTZ7/meg6kW8DMmARjmUvAauBfJiDCbRVwRbwsYUmzJxxXQCktc78oOiUkL8O/8="
   on:
     tags: true
     repo: manifoldco/pytill
