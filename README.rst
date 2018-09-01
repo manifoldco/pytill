@@ -14,7 +14,7 @@ pytill
         :alt: Documentation Status
 
 
-Python package for using Till Mobile brought to you by manifold.co
+Python package for using Till Mobile brought to you by https://manifold.co
 
 
 * Free software: BSD license
