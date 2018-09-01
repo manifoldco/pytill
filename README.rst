@@ -26,7 +26,7 @@ How to use
 
 Set up a plan for till and retrieve till username and api key. This packages expects the username and api key are injected as env vars ``USERNAME`` and ``API_KEY``.
 
-You can do this simply through manifold:
+You can do this simply through manifold: (see: https://docs.manifold.co/docs/cli-quickstart-6JMEw1CD6wguwIYymUuAQ6)
 
 .. code-block:: bash
 
